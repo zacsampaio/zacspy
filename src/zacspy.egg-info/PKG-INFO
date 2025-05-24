@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: zacspy
-Version: 0.1.0
-Summary: Biblioteca de utilitários pessoais em Python
-Author-email: Seu Nome <seu@email.com>
-Requires-Python: >=3.8
-Description-Content-Type: text/markdown
-Requires-Dist: pdf2image
-Requires-Dist: Pillow

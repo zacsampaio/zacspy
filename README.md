@@ -1,6 +1,6 @@
 # zacspy
 
-Biblioteca Python para utilitários e ferramentas diversas desenvolvida por Isaac, ainda em desenvolvimento
+Biblioteca Python para utilitários e ferramentas diversas desenvolvida por Isaac, biblioteca ainda em desenvolvimento...
 
 ## Visão Geral
 
@@ -14,23 +14,24 @@ Biblioteca Python para utilitários e ferramentas diversas desenvolvida por Isaa
 ## Instalação
 
 Clone o repositório:
-    ```bash
-        git clone https://github.com/seuusuario/zacspy.git
-        cd zacspy
+  ```bash
+      git clone https://github.com/zacsampaio/zacspy.git
+      cd zacspy
+  ```
 
 Instale as dependências (exemplo, adapte conforme sua necessidade):
-    ```bash
-        pip install -r requirements.txt
+  ```bash
+      pip install -r requirements.txt
+  ```
 
 ## Uso
-Cada módulo tem seu próprio uso e documentação.
+  Cada módulo tem seu próprio uso e documentação.
 
 ## Exemplo de uso do módulo convert_to_300_dpi:
   python apps/convert_to_300_dpi/main.py --input arquivo.pdf --output arquivo_300dpi.pdf
 
 ## Contribuição
-Contribuições são bem-vindas! Abra issues e pull requests.
+  Contribuições são bem-vindas! Abra issues e pull requests.
 
 ## Licença
-
-MIT License
+  MIT License

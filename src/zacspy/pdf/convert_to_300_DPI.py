@@ -1,10 +1,11 @@
 from pathlib import Path
+import os
+import shutil
 from pdf2image import convert_from_path
+import sys
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch
-import os
-import sys
-import shutil  # para remover pastas com conteúdo
+
 
 def resource_path(relative_path):
     """Retorna o caminho absoluto, funciona para rodar dentro de PyInstaller exe."""
@@ -14,7 +15,7 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
 
-def convert_pdf_to_300dpi(pdf_path: str, output_pdf_path: str) -> None:
+def convert_pdf_to_300dpi(pdf_path: str, output_pdf_path: str, dpi: int = 300) -> None:
     pdf_path = Path(pdf_path)
     output_pdf_path = Path(output_pdf_path)
     output_dir = output_pdf_path.parent / "temp_images"
@@ -27,7 +28,7 @@ def convert_pdf_to_300dpi(pdf_path: str, output_pdf_path: str) -> None:
 
     images = convert_from_path(
         str(pdf_path),
-        dpi=300,
+        dpi=dpi,
         poppler_path=poppler_path
     )
 
