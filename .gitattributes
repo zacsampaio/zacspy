@@ -1,19 +1,21 @@
-# Ignorar arquivos C
+# Ignorar arquivos C e C++
 *.c linguist-vendored
 *.h linguist-vendored
-
-# Ignorar arquivos C++
 *.cpp linguist-vendored
 *.cc linguist-vendored
 *.cxx linguist-vendored
 *.hpp linguist-vendored
+*.hh linguist-vendored
+*.hxx linguist-vendored
 
-# Ignorar Makefiles
+# Ignorar arquivos Makefile
 Makefile linguist-vendored
-makefile linguist-vendored
-GNUmakefile linguist-vendored
+*.mak linguist-vendored
+*.mk linguist-vendored
+*.cmake linguist-vendored
+*.CMakeLists.txt linguist-vendored
 
-# Ignorar arquivos roff (usados para docs, man pages)
+# Ignorar arquivos Roff
 *.1 linguist-vendored
 *.2 linguist-vendored
 *.3 linguist-vendored
@@ -22,7 +24,10 @@ GNUmakefile linguist-vendored
 *.6 linguist-vendored
 *.7 linguist-vendored
 *.8 linguist-vendored
+*.9 linguist-vendored
 *.man linguist-vendored
-*.ms linguist-vendored
-*.troff linguist-vendored
 *.roff linguist-vendored
+
+# Ignorar arquivos CMaker (geralmente *.cmake e CMakeLists.txt já cobertos acima, mas só para garantir)
+*.cmake linguist-vendored
+CMakeLists.txt linguist-vendored
