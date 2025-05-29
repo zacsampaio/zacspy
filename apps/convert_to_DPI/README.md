@@ -19,7 +19,6 @@ Programa Python para converter arquivos PDF para resolução de 300 DPI, utiliza
 1. Clone o repositório:
     ```bash
      git clone https://github.com/zacsampaio/zacspy.git
-     cd zacspy/apps/convert_to_300_dpi
      ```
 
 2. Instale as dependências:
@@ -32,16 +31,16 @@ Programa Python para converter arquivos PDF para resolução de 300 DPI, utiliza
 ## Uso
 Execute o script passando o arquivo PDF de entrada e o nome do arquivo de saída:
 ```bash
-python main.py --input caminho/para/arquivo.pdf --output caminho/para/saida_300dpi.pdf
+pyinstaller --onefile --noconsole --name=CONVERT_PDF_X_DPI --icon=apps/convert_to_dpi/icon.ico apps/convert_to_dpi/main.py
 ```
 
 ## Empacotado com PyInstaller
 
-O executável 300_DPI_PDF.exe está disponível na pasta dist/ após a build com PyInstaller.
+O executável DPI_X_PDF.exe está disponível na pasta dist/ após a build com PyInstaller.
 
 Para criar o executável:
 ```bash
-pyinstaller --onefile --windowed --name=300_DPI_PDF --add-data "poppler;poppler" main.py --icon=icon.ico
+pyinstaller --onefile --noconsole --name=CONVERT_PDF_X_DPI --icon=apps/convert_to_dpi/icon.ico --add-data "poppler;poppler" apps/convert_to_dpi/main.py
 ```
 
 

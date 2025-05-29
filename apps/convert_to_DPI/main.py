@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
 from pathlib import Path
-from zacspy.pdf.convert_to_300_DPI import convert_pdf_to_300dpi
+from zacspy.pdf.convert_to_300_DPI import convert_pdf_to_dpi
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
@@ -94,7 +94,7 @@ class App(ctk.CTk):
             output_path = str(Path(input_path).with_name(Path(input_path).stem + f"_{dpi}DPI.pdf"))
 
         try:
-            convert_pdf_to_300dpi(input_path, output_path, dpi=dpi)
+            convert_pdf_to_dpi(input_path, output_path, dpi=dpi)
             messagebox.showinfo("Sucesso", f"PDF convertido para {dpi} DPI e salvo em:\n{output_path}")
         except Exception as e:
             messagebox.showerror("Erro", f"Ocorreu um erro:\n{e}")

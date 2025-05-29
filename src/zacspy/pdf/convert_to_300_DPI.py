@@ -15,7 +15,7 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
 
-def convert_pdf_to_300dpi(pdf_path: str, output_pdf_path: str, dpi: int = 300) -> None:
+def convert_pdf_to_dpi(pdf_path: str, output_pdf_path: str, dpi: int = 300) -> None:
     pdf_path = Path(pdf_path)
     output_pdf_path = Path(output_pdf_path)
     output_dir = output_pdf_path.parent / "temp_images"
